@@ -1,0 +1,21 @@
+## Criando um Map
+
+É possível criar um maps em Elixir como no exemplo a seguir.
+Exemplo:
+  iex> colors = %{primary: "red", secondary: "green"}
+  %{primary: "red", secondary: "green"}
+
+
+## Adicionar novos items ou sobrescrever valores
+
+É possível adicionar ou sobrescrever valores de um Map em elixir usando a função put do módulo Map.
+Exemplo:
+  iex> colors = Map.put(colors, :primary, "blue") #A chave deve ser escrita como atom
+  %{primary: "blue", secondary: "green"}
+
+Também é possível sobrescrever valores de um map com a sintaxe do exemplo a seguir.
+Exemplo:
+  iex> %{colors | primary: "blue"}
+  %{primary: "blue", secondary: "green"} #Essa sintaxe é valida apenas para atualizar valores de chaves 
+                                          existentes, não é possível criar valores para novas chaves usando essa sintaxe
+
